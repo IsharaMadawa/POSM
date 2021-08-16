@@ -1,0 +1,45 @@
+.switch-wrapper {
+  position: relative;
+}
+
+.switch-wrapper > div {
+  position: absolute;
+}
+
+.centerContent {
+  text-align: center;
+}
+
+.smallFont {
+  font-style: italic;
+  font-size: 12px;
+}
+
+.mediumFont {
+  font-style: italic;
+  font-size: 15px;
+}
+
+.logo-image {
+  width: 70px;
+  height: 52px;
+}
+
+.pane-content {
+  padding: 0 10px;
+}
+h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.fullHeight {
+  height: 100vh;
+  min-height: 100vh;
+  padding: 0;
+}

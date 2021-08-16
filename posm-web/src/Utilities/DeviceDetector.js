@@ -1,0 +1,76 @@
+import * as Device from 'react-device-detect';
+
+function DeviceDetector() {
+    var isDesktop = Device.isDesktop,
+        isMobile = Device.isMobile,
+        isTablet = Device.isTablet,
+        isMobilePhone = Device.isMobileOnly,
+        isSmartTV = Device.isSmartTV,
+        isWearable = Device.isWearable,
+        isAndroid = Device.isAndroid,
+        isWindows = Device.isWindows,
+        isWinPhone = Device.isWinPhone,
+        isMacOs = Device.isMacOs,
+        isIOS = Device.isIOS,
+        isChrome = Device.isChrome,
+        isFirefox = Device.isFirefox,
+        isSafari = Device.isSafari,
+        isOpera = Device.isOpera,
+        isEdge = Device.isEdge,
+        isIE = Device.isIE,
+        isMobileSafari = Device.isMobileSafari,
+        osVersion = Device.osVersion,
+        osName = Device.osName,
+        osTypes = Device.OsTypes,
+        fullBrowserVersion = Device.fullBrowserVersion,
+        browserVersion = Device.browserVersion,
+        browserName = Device.browserName,
+        mobileVendor = Device.mobileVendor,
+        mobileModel = Device.mobileModel,
+        engineName = Device.engineName,
+        engineVersion = Device.engineVersion,
+        deviceType = Device.deviceType,
+        browserTypes = Device.BrowserTypes,
+        userAgent = Device.getUA,
+        deviceInfo = Device.deviceDetect;
+
+
+
+
+    return {
+        isDesktop: isDesktop,
+        isMobile: isMobile,
+        isTablet: isTablet,
+        isMobilePhone: isMobilePhone,
+        isSmartTV: isSmartTV,
+        isWearable: isWearable,
+        isAndroid: isAndroid,
+        isWindows: isWindows,
+        isWinPhone: isWinPhone,
+        isMacOs: isMacOs,
+        isIOS: isIOS,
+        isChrome: isChrome,
+        isFirefox: isFirefox,
+        isSafari: isSafari,
+        isOpera: isOpera,
+        isEdge: isEdge,
+        isIE: isIE,
+        isMobileSafari: isMobileSafari,
+        osVersion: osVersion,
+        osName: osName,
+        osTypes: osTypes,
+        fullBrowserVersion: fullBrowserVersion,
+        browserVersion: browserVersion,
+        browserName: browserName,
+        mobileVendor: mobileVendor,
+        mobileModel: mobileModel,
+        engineName: engineName,
+        engineVersion: engineVersion,
+        deviceType: deviceType,
+        browserTypes: browserTypes,
+        userAgent: userAgent,
+        deviceInfo: deviceInfo
+    }
+}
+
+export default DeviceDetector();

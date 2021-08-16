@@ -1,6 +1,6 @@
 import Moment from 'react-moment';
 
-function Billing() {
+function Home() {
     var time = '1976-04-19T12:59:17-0500';
 
 
@@ -31,4 +31,4 @@ function Billing() {
     );
 }
 
-export default Billing;
+export default Home;
