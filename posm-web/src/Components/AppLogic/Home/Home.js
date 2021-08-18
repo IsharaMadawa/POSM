@@ -4,8 +4,11 @@ function Home() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const [users, setUsers] = useState([]);
-  const [users_no, setUsers_no] = useState([]);
+  const [customers, setCustomers] = useState([]);
+  const [assets, setAssets] = useState([]);
+
+  const [customers_no, setCustomers_no] = useState([]);
+  const [assets_no, setAssets_no] = useState([]);
 
   const bearer = "Bearer " + "jegmscAySDI70m4kuSVyV2ELrcLyfR0RoiFIIOhXziw";
 
@@ -20,7 +23,8 @@ function Home() {
       .then(
         (data) => {
           setIsLoaded(true);
-          setUsers(data.items);
+          setCustomers(data.items);
+          setAssets(data.includes.Asset);
         },
         (error) => {
           setIsLoaded(true);
@@ -43,7 +47,8 @@ function Home() {
       .then(
         (data) => {
           setIsLoaded(true);
-          setUsers_no(data.items);
+          setCustomers_no(data.items);
+          setAssets_no(data.includes.Asset);
         },
         (error) => {
           setIsLoaded(true);
@@ -59,10 +64,10 @@ function Home() {
   } else {
     return (
       <div className="row">
-        <div className="col-6">
-          <h1>EN List</h1>
+        <div className="col-3">
+          <h1>Customer List - EN</h1>
           <ul>
-            {users
+            {customers
               .sort((a, b) => (a.fields.order > b.fields.order ? 1 : -1))
               .map((cus) => (
                 <div key={cus.fields.order} className="custom_div">
@@ -73,10 +78,10 @@ function Home() {
               ))}
           </ul>
         </div>
-        <div className="col-6">
-          <h1>NO List</h1>
+        <div className="col-3">
+          <h1>Customer List - NO</h1>
           <ul>
-            {users
+            {customers_no
               .sort((a, b) => (a.fields.order > b.fields.order ? 1 : -1))
               .map((cus) => (
                 <div key={cus.fields.order} className="custom_div">
@@ -85,6 +90,36 @@ function Home() {
                   </div>
                 </div>
               ))}
+          </ul>
+        </div>
+        <div className="col-3">
+          <h1>Asset List - EN</h1>
+          <ul>
+            {assets.map((asset) => (
+              <div key={asset.sys.id} className="custom_div_1">
+                <div>
+                  <b>{asset.fields.title}</b> - {asset.fields.description}
+                </div>
+                <div>
+                  <img src={asset.fields.file.url}></img>
+                </div>
+              </div>
+            ))}
+          </ul>
+        </div>
+        <div className="col-3">
+          <h1>Asset List - NO</h1>
+          <ul>
+            {assets_no.map((asset) => (
+              <div key={asset.sys.id} className="custom_div_1">
+                <div>
+                  <b>{asset.fields.title}</b> - {asset.fields.description}
+                </div>
+                <div>
+                  <img src={asset.fields.file.url}></img>
+                </div>
+              </div>
+            ))}
           </ul>
         </div>
       </div>

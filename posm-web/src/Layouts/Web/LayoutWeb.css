@@ -46,10 +46,16 @@ p {
 
 .custom_div{
   text-align: left;
-  height: 70px;
+  height: auto;
   width: 300px;
   line-height: 50px;
   padding: 10px;
   background-color: aquamarine;
   margin-top: 10px;
+}
+
+.custom_div_1{
+  background-color: bisque;
+  margin-top: 10px;
+  width: 400px;
 }
