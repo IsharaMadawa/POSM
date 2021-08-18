@@ -9,7 +9,8 @@ import "./LayoutWeb.css";
 
 function LayoutWeb(props) {
   var state = {
-    result: "No result",
+    //result: "No result",
+    result: "",
   };
 
   function handleScan(data) {

@@ -43,3 +43,13 @@ p {
   min-height: 100vh;
   padding: 0;
 }
+
+.custom_div{
+  text-align: left;
+  height: 70px;
+  width: 300px;
+  line-height: 50px;
+  padding: 10px;
+  background-color: aquamarine;
+  margin-top: 10px;
+}
